@@ -20,7 +20,7 @@
 
 在下一篇，我们将介绍如何实现这个合约。在下一篇中登场的是主角将是BSV上的高级语言[sCrypt](https://scryptdoc.readthedocs.io/en/latest/)。
 
-
+----
 
 参考链接：
 
