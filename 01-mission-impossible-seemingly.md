@@ -20,21 +20,8 @@
 
 在下一篇，我们将介绍如何实现这个合约。在下一篇中登场的是主角将是BSV上的高级语言[sCrypt](https://scryptdoc.readthedocs.io/en/latest/)。
 
+----
 
-
-参考链接：
+参考资料：
 
 * [Stateful Smart Contracts on Bitcoin SV](https://medium.com/coinmonks/stateful-smart-contracts-on-bitcoin-sv-c24f83a0f783)
-
-
-
-
-
-
-
-
-
-
-
-
-
