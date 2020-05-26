@@ -1,4 +1,4 @@
-# BSV智能合约（二）：合约代码分析
+# BSV智能合约（二）：计数器合约代码分析
 
 为了实现上一篇文章中说的“计数器合约”，需要介绍BSV上的高级语言[sCrypt](https://scryptdoc.readthedocs.io/en/latest/)，并解释如何用sCrypt实现这个合约。
 
