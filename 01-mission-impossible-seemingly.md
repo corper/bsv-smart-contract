@@ -22,19 +22,6 @@
 
 ----
 
-参考链接：
+参考资料：
 
 * [Stateful Smart Contracts on Bitcoin SV](https://medium.com/coinmonks/stateful-smart-contracts-on-bitcoin-sv-c24f83a0f783)
-
-
-
-
-
-
-
-
-
-
-
-
-
