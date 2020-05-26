@@ -10,7 +10,7 @@
 2. 当“计数器合约”里的币被花费时，必须生成一个新的“计数器合约”UTXO，并将计数器值加1，记录在这个新UTXO中。
 3. 规则2的执行由矿工保证。也就是说，如果没有符合规则的新“计数器合约”UTXO生成，就无法花费合约中的币。
 
-<img src="https://bico.media/26a4feb43792d10348eac5d10af916b5047ad4384d2b07eac99e029120ccd4fd" alt="counter smart contract flow" style="zoom:50%;" />
+![counter contract tx flow](https://bico.media/b04a2c2774cfab56782b689bc8710f5fefe8d7287a5cf338dde22a47c658b637)
 
 
 
