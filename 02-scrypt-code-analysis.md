@@ -123,7 +123,7 @@ require(hashOutputs == hashOutputs_);
 
 前面已经从`sighashPreimage`参数中解析出了实际的新TX output hash值`hashOutputs`，也计算出了符合合约规则的预期hash值`hashOutputs_`。只要比较这两个值是否相等，就可以确定实际的TX output是否符合规则。如果不符合规则，那么旧TX的UTXO就无法被花费。
 
-这样，整个合约就完成了。
+这样，整个合约就完成了。这个合约已经部署在了BSV的测试网络上：[0](https://test.whatsonchain.com/tx/5bde01982a262beb5f438ca36ee27ca75467ac890183b329e2fd5fcb16b488cf), [1](https://test.whatsonchain.com/tx/1f3c9b9dfacc4ff485d6fecf01c7dd1e5d8d8493d24b259a1d57b4e759eaf926), [2](https://test.whatsonchain.com/tx/34418a69f2dee4b2e7263f4d56a8fd5bd5e301a6e2120fde50672eed7537cb0e) ...
 
 
 
