@@ -12,7 +12,7 @@ contract Counter {
         Tx tx = new Tx();
         require(tx.validate(sighashPreimage));
         int len = length(sighashPreimage);
-		    bytes hashOutputs = sighashPreimage[len - 40 : len - 8];
+        bytes hashOutputs = sighashPreimage[len - 40 : len - 8];
         bytes scriptCode = Util.readVarint(sighashPreimage[104:]);
         int scriptLen = length(scriptCode);
         int counter = unpack(scriptCode[scriptLen - 1 :]);
