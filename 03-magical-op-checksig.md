@@ -43,11 +43,11 @@ Tx tx = new Tx();
 require(tx.validate(sighashPreimage));
 ```
 
-该方案及相关技术已由nChain公司申请了专利。
+该方案及相关技术nChain公司已申请了专利。
 
 
 
-用脚本直接计算ECDSA签名，用OP_CHECKSIG验证传入数据的真实性。这是十年来在比特币上开的最大脑洞之一，脑洞的另一端也许是一个新的宇宙。
+用脚本直接计算ECDSA签名，用OP_CHECKSIG验证传入数据的真实性。这是十年来在比特币上开的最大脑洞之一，脑洞的另一端也许是一个更有趣的世界。
 
 ----
 
