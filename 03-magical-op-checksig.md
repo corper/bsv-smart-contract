@@ -5,10 +5,10 @@
 [OP_CHECKSIG](https://wiki.bitcoinsv.io/index.php/OP_CHECKSIG)用于验证ECDSA签名。ECDSA签名的验证需要如下三个参数：
 
 1. 公钥：签名私钥对应的公钥。
-2. 数据：被签名的数据的Hash值。
+2. 被签名数据：被签名的数据的Hash值。
 3. 签名。
 
-如果签名是由公钥对应的私钥针对数据进行签署的，那么签名验证成功，否则失败。而OP_CHECKSIG验证的ECDSA签名，只需要公钥和签名两个参数。为什么没有“被签名数据”参数呢？因为在OP_CHECKSIG中，“被签名数据”参数是一组固定数据的Hash值。这组固定数据是这样构成的：
+如果签名是由公钥对应的私钥针对数据进行签署的，那么签名验证成功，否则失败。而OP_CHECKSIG验证的ECDSA签名，只需要公钥和签名两个参数。为什么没有“被签名数据”参数呢？因为在OP_CHECKSIG中，“被签名数据”参数是一组固定数据的Hash值，也就是说OP_CHECK只检测对特定数据的签名。这组固定数据来自新（花费）老（被花费）两组TX，是这样构成的：
 
 > 1. nVersion of the transaction (4-byte little endian)
 > 2. hashPrevouts (32-byte hash)
@@ -21,7 +21,7 @@
 > 9. nLocktime of the transaction (4-byte little endian)
 > 10. sighash type of the signature (4-byte little endian)
 
-上述5、8两项是不是看着有点眼熟？是的，这就是上一篇里从sighashPreimage参数里解析出来的两个数据。其实，上面这组数据就是sighashPreimage。只是，这里的sighashPreimage是验证签名时，比特币的实现代码（如全节点代码）从老TX（被花费的TX）和新TX中获取的，是真实的，我们称之为`真实sighashPreimage`。而计数器合约中的sighashPreimage是传入合约的解锁参数之一，不一定与真实的一致，我们称之为`传入sighashPreimage`。而如何保证`传入sighashPreimage`与`真实sighashPreimage`是一样的，正是计数器合约要解决的关键问题。
+上述5、8两项是不是看着有点眼熟？是的，这就是上一篇里从`sighashPreimage`参数里解析出来的两个数据。其实，上面这组数据就是`sighashPreimage`。只是，这里的`sighashPreimage`是在验证签名时，由比特币的实现代码（如全节点代码）从老TX和新TX中获取的，是真实的，我们称之为`真实sighashPreimage`。而计数器合约中的sighashPreimage是调用者传入合约的解锁参数之一，不一定与真实的一致，我们称之为`传入sighashPreimage`。而如何保证`传入sighashPreimage`与`真实sighashPreimage`是一样的，正是计数器合约要解决的关键问题。
 
 
 
@@ -36,7 +36,7 @@
 
 
 
-这种检测`传入sighashPreimage`真实性的方案有个专有名字，叫OP_PUSH_TX。虽然以OP开头，但这并不是一个BSV协议中的基本操作码。可以把它理解为用基本操作码编写的一个高层函数。sCrypt语言中用如下两行代码来实现OP_PUSH_TX：
+这种检测`传入sighashPreimage`真实性的方案有个专有名字，叫OP_PUSH_TX。虽然以OP开头，但这并不是BSV协议中的基本操作码。可以把它理解为用基本操作码编写的一个函数。sCrypt语言中用如下两行代码来实现OP_PUSH_TX：
 
 ```c++
 Tx tx = new Tx();
