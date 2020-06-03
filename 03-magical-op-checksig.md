@@ -43,7 +43,13 @@ Tx tx = new Tx();
 require(tx.validate(sighashPreimage));
 ```
 
-该方案及相关技术nChain公司已申请了专利。
+
+
+nChain公司已申请了该方案及相关技术的专利。运用OP_PUSH_TX的智能合约例子还有：
+
+1. [BSV层1 Token示例](https://medium.com/coinmonks/layer-1-tokens-on-bitcoin-sv-e78c8abf270d)
+2. [BSV原子交换示例](https://medium.com/@xiaohuiliu/atomic-swap-on-bitcoin-sv-abc28e836cd5)
+3. [农民对冲天气风险的保险合约](https://medium.com/@Stas33496115/bitcoin-script-engineering-part-ii-ba8095f093c0)
 
 
 
