@@ -59,6 +59,12 @@ nChain公司已申请了该方案及相关技术的专利。运用OP_PUSH_TX的�
 
 参考资料
 
-1. [Bitcoin SV wiki OP_CHECKSIG](https://wiki.bitcoinsv.io/index.php/OP_CHECKSIG)
-2. [BSV & BCH signature verification](https://github.com/bitcoin-sv/bitcoin-sv/blob/master/doc/abc/replay-protected-sighash.md#digest-algorithm)
-3. [OP_PUSH_TX](https://medium.com/@xiaohuiliu/op-push-tx-3d3d279174c1)
+* [Bitcoin SV wiki OP_CHECKSIG](https://wiki.bitcoinsv.io/index.php/OP_CHECKSIG)
+
+* [BSV & BCH signature verification](https://github.com/bitcoin-sv/bitcoin-sv/blob/master/doc/abc/replay-protected-sighash.md#digest-algorithm)
+
+* [OP_PUSH_TX](https://medium.com/@xiaohuiliu/op-push-tx-3d3d279174c1)
+
+----
+
+上一篇：[计数器合约代码分析](https://github.com/corper/bsv-smart-contract/blob/master/02-scrypt-code-analysis.md)

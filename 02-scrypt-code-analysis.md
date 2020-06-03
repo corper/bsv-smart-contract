@@ -141,3 +141,9 @@ require(hashOutputs == hashOutputs_);
 
 * [Stateful Smart Contracts on Bitcoin SV](https://medium.com/coinmonks/stateful-smart-contracts-on-bitcoin-sv-c24f83a0f783)
 * [OP_PUSH_TX](https://medium.com/@xiaohuiliu/op-push-tx-3d3d279174c1)
+
+----
+
+上一篇：[看似不可能完成的任务](https://github.com/corper/bsv-smart-contract/blob/master/01-mission-impossible-seemingly.md)
+
+下一篇：[神奇的OP_CHECKSIG](https://github.com/corper/bsv-smart-contract/blob/master/03-magical-op-checksig.md)
