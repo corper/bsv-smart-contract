@@ -68,3 +68,5 @@ nChain公司已申请了该方案及相关技术的专利。运用OP_PUSH_TX的�
 ----
 
 上一篇：[计数器合约代码分析](https://github.com/corper/bsv-smart-contract/blob/master/02-scrypt-code-analysis.md)
+
+下一篇：[OP_PUSH_TX背后的故事](https://github.com/corper/bsv-smart-contract/blob/master/04-the-story-behind-op_push_tx.md)
